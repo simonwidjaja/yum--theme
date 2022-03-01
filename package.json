@@ -1,6 +1,6 @@
 {
-  "name": "yum-theme",
-  "version": "0.1.0",
+  "name": "yum--theme",
+  "version": "0.1.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
