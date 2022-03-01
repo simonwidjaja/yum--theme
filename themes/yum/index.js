@@ -5,11 +5,12 @@
 // (2) import * as yum from '@@yum'
 //----------
 
-// Layout
+// Theme
 import DefaultTheme from './theme/DefaultTheme';
 // Layout
 import Layout from './layout/Layout';
 // Core
+import Version from './components/core/Version'
 import MetaLabel from './components/core/MetaLabel'
 import Headline from './components/core/Headline'
 import List from './components/core/List'
@@ -50,6 +51,7 @@ import WorkshopTeaser from './components/special/WorkshopTeaser'
 import XrayLabel from './components/internal/XrayLabel';
 
 export {
+  Version,
   DefaultTheme,
   Layout,
   Section,
