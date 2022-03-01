@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import package from '../../../../package.json'
+import pkg from '../../../../package.json'
 
 export default function Version(props) {
   let className = props.className ? props.className : '';
   let style = props.style ? props.style : {};
   return (
     <Component className={"Version "+className} style={style}>
-      YUM VERSION: {package.version}
+      YUM VERSION: {pkg.version}
     </Component>
   )
 }
