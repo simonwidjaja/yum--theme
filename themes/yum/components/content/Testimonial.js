@@ -39,9 +39,10 @@ const Component = styled.div`
   
     .text {
       padding-left: 20px;
-      font-style: italic;
+      // font-style: italic;
       .name {
-        font-style: normal;
+        margin-top: 8px;
+        // font-style: normal;
         font-weight: 600;
       }
     }
