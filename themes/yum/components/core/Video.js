@@ -6,6 +6,13 @@ import styled from 'styled-components'
 //import ReactPlayer from 'react-player/youtube'
 import ReactPlayer from 'react-player/lazy'
 
+/**
+ * Video
+ * @param {*} props 
+ * @param {String} props.url Video URL (e.g. https://vimeo.com/582445579 or https://www.youtube.com/watch?v=omWU5kWQUr0)
+ * @param {Boolean} props.controls Show controls
+ * @param {String|React} props.title Video title
+ */
 export default function Video(props) {
   let className = props.className ? props.className : '';
   let style = props.style ? props.style : {};
@@ -19,7 +26,7 @@ export default function Video(props) {
 
       <ReactPlayer url={props.url}
                    width="100%"
-                   controls={props.controls == 'undefined' ? true : false} />
+                   controls={[true, "true", undefined, 'undefined'].indexOf(props.controls) > -1 ? true : false} />
       
       {props.title &&
         <div className="title font2-sm">{props.title}</div>

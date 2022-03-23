@@ -1,6 +1,14 @@
 import styled from 'styled-components'
 import {DefaultTheme, Section, Container, Row, Col, Spacer, Headline, Button, Pill, HeadlineAndText, Separator, ImageAndText, Claim, Text, WorkshopTeaser} from '@@yum'
 
+
+/**
+ * CallToAction1
+ * @param {*} props 
+ * @param {*} props.title Title
+ * @param {*} props.body Body text
+ * @param {*} props.children Same as body 
+ */
 export default function CallToAction1(props) {
   let className = props.className ? props.className : '';
   let style = props.style ? props.style : {};
@@ -46,7 +54,7 @@ const Component = styled.div`
         position: absolute;
         width: 100%;
         height: 150%;
-        background-image: url(/themes/yum/wip/yumshe_composition_bubble.png);
+        background-image: url(/themes/yum/misc/character_composition_bubble.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: 50% 100%;

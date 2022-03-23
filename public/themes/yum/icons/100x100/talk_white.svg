@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g id="Group_8345" data-name="Group 8345" transform="translate(-33 -293.896)">
+    <g id="_2_Speech_Bubbles_Chat_" data-name="2 Speech Bubbles (Chat)" transform="translate(45 306.785)">
+      <path id="Vector" d="M32.67,48.8q-1.485.124-2.97.124a30.34,30.34,0,0,1-13.489-3.176L.165,48.056,2.6,31.928H2.64A28.266,28.266,0,0,1,8.291,0" transform="translate(0 21.188)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke-dasharray="0 0"/>
+      <g id="Group" transform="translate(30.154 29.768)">
+        <path id="Vector-2" data-name="Vector" d="M3.3,6.435A3.26,3.26,0,0,1,0,3.217,3.26,3.26,0,0,1,3.3,0,3.26,3.26,0,0,1,6.6,3.217,3.26,3.26,0,0,1,3.3,6.435Z" transform="translate(0 0)" fill="none" stroke="#fff" stroke-width="1.5"/>
+        <path id="Vector-3" data-name="Vector" d="M3.3,6.435A3.26,3.26,0,0,1,0,3.217,3.26,3.26,0,0,1,3.3,0,3.26,3.26,0,0,1,6.6,3.217,3.26,3.26,0,0,1,3.3,6.435Z" transform="translate(13.2 0)" fill="none" stroke="#fff" stroke-width="1.5"/>
+        <path id="Vector-4" data-name="Vector" d="M3.3,6.435A3.26,3.26,0,0,1,0,3.217,3.26,3.26,0,0,1,3.3,0,3.26,3.26,0,0,1,6.6,3.217,3.26,3.26,0,0,1,3.3,6.435Z" transform="translate(26.359 0)" fill="none" stroke="#fff" stroke-width="1.5"/>
+      </g>
+      <path id="Vector-5" data-name="Vector" d="M59.194,56.884l-16.046-2.31a29.841,29.841,0,0,1-9.364,2.888,26.984,26.984,0,0,1-4.125.289C13.241,57.75,0,44.839,0,28.875A28.132,28.132,0,0,1,8.621,8.58,29.662,29.662,0,0,1,29.7,0C46.117,0,59.359,12.911,59.359,28.875a28.613,28.613,0,0,1-2.64,11.88h.041Z" transform="translate(16.954 4.111)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke-dasharray="0 0"/>
+    </g>
+    <rect id="Rectangle_1075" data-name="Rectangle 1075" width="100" height="100" transform="translate(33 293.896)" fill="#fff" opacity="0"/>
+  </g>
+</svg>

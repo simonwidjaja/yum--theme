@@ -5,7 +5,7 @@ import {DefaultTheme, Container, Row, Col, Button} from "@@yum";
 /**
  * CallToActionDuo
  * @param {Array} items Items with following properties:
- *                      title, text, buttonLabel, baseColor, inverted 
+ *                      title, text, buttonLabel, href, baseColor, inverted 
  */
 export default function CallToActionDuo({ items }) {
   // console.log('items', items.length, items.map);

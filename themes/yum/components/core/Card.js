@@ -18,11 +18,11 @@ export default function Card({
   isLight,
 }) {
   return (
-    <CardWrapper bgColor={bgColor} isDark={isLight} >
+    <Component bgColor={bgColor} isDark={isLight} >
       {icon && <img src={icon} alt={title} />}
       <h3 className="font-h3">{title}</h3>
       <p>{text}</p>
-    </CardWrapper>
+    </Component>
   );
 }
 
@@ -30,7 +30,7 @@ export default function Card({
 // Styles
 ////////////////////////////////////////////////////
 
-const CardWrapper = styled.div`
+const Component = styled.div`
   background-color: ${(props) => props.bgColor || 'var(--purple)'};
   padding: 40px 28px 45px;
   border-radius: 32px;
@@ -38,7 +38,7 @@ const CardWrapper = styled.div`
   height: 100%;
 
   & img {
-    height: 66px;
-    margin-bottom: 20px;
+    height: 100px;
+    margin-bottom: 10px;
   }
 `;

@@ -19,5 +19,11 @@ exports.default = (cb) => {
     cb();
   });
 
+  watch(['../public/themes/yum/**/*.*'], function(cb) {
+    src('../public/themes/yum/**/*.*')
+      .pipe(dest('/Users/simonwidjaja/Desktop/Data/Repos/simonwidjaja/trendspurt.com/public/themes/yum/'))
+    cb();
+  });
+
   cb()
 }

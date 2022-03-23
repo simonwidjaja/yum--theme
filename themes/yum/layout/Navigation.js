@@ -18,7 +18,7 @@ export default function Navigation(props) {
         {props.config.preNavigationRibbon}
         
         <nav className="container">
-          MENUBAR
+          {/* MENUBAR */}
           {/* <Menubar className="primary-navigation"
             model={props.config.primaryNavigation}
             start={

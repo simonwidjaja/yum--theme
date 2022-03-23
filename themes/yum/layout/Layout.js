@@ -13,6 +13,8 @@ import Head from 'next/head'
 export default function Layout(props) {
   const style = props.style ? props.style : {};  
   const title = (props.page?.title ? props.page.title+' – ' : '') + props.config.site.title;
+  const keywords = (props.page?.keywords ? props.page?.keywords +', ' : '') + props.config.site.keywords;
+  const description = (props.page?.description ? props.page?.description +', ' : '') + props.config.site.description;
 
 
   useEffect(() => {
@@ -48,8 +50,8 @@ export default function Layout(props) {
 
       <Head>
         <title>{title}</title>
-        <meta name="description" content={props.config.site.description}></meta>
-        <meta name="keywords" content={props.config.site.keywords}></meta>
+        <meta name="description" content={description}></meta>
+        <meta name="keywords" content={keywords}></meta>
         <meta name="author" content={props.config.site.author}></meta>
         <meta property="og:title" content={title} />
         <link rel="icon" href="/favicon.ico" />

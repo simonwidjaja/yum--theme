@@ -29,6 +29,8 @@ import Placeholder from './components/core/Placeholder'
 import Spinner from './components/core/Spinner'
 import Card from './components/core/Card'
 import CardSet from './components/core/CardSet'
+import Emoji from './components/core/Emoji'
+import Facts from './components/core/Facts'
 // Content
 import CallToAction1 from './components/content/CallToAction1'
 import CallToActionDuo from './components/content/CallToActionDuo'
@@ -38,6 +40,7 @@ import Claim from './components/content/Claim'
 import ImageAndText from './components/content/ImageAndText'
 import TextVideo from './components/content/TextVideo'
 import PriceCard from './components/content/PriceCard'
+import HeroA from './components/content/HeroA'
 import Testimonial from './components/content/Testimonial'
 // Forms
 import FormGroup from './components/forms/FormGroup'
@@ -47,6 +50,7 @@ import FormSelect from './components/forms/FormSelect'
 import HubspotForm from './components/forms/HubspotForm'
 // Special
 import WorkshopTeaser from './components/special/WorkshopTeaser'
+import ReferenceTile from './components/special/ReferenceTile'
 // Internal
 import XrayLabel from './components/internal/XrayLabel';
 
@@ -71,6 +75,8 @@ export {
   Spinner,
   Card, CardSet,
   List,
+  Emoji,
+  Facts,
 
   HeadlineAndText,
   ColorfulHeadlineAndText,
@@ -80,9 +86,12 @@ export {
   PriceCard,
   CallToAction1,
   CallToActionDuo,
+  HeroA,
   Testimonial,
 
+  // Special
   WorkshopTeaser,
+  ReferenceTile,
   
   // Forms
   FormGroup, FormLabel, FormControl, FormSelect, 

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import {DefaultTheme, Section, Container, Row, Col, Spacer, Headline, Button, Pill, HeadlineAndText, Separator, ImageAndText, Claim, Text, WorkshopTeaser} from '@@yum'
 
 export default function Testimonial({image, name, ...props}) {
   let className = props.className ? props.className : '';

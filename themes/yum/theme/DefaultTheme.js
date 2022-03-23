@@ -26,11 +26,14 @@ export var fonts = {
 
 export var DefaultTheme = {
   colors: {
-    'coal': '#1A2327',
     'white': '#FFFFFF',
+    
     'snow': '#EAEDF0',
-
-    'coal': '#00FF00',
+    'snow-lightest': '#F9FAFB',
+    'snow-lighter': '#F7F8F9',
+    'snow-light': '#F0F2F4',
+    
+    'coal': '#1A2327',
     'coal-lightest': '#F0F1F1',
     'coal-lighter': '#868B8C',
     'coal-light': '#31393D',
@@ -53,7 +56,8 @@ export var DefaultTheme = {
     'french-rose-dark': '#E23157',
     'french-rose-darker': '#D3264E',
     'french-rose-darkest': '#920B41',
-
+    
+    'turquoise': '#15B7B7',
 
 
 
@@ -76,6 +80,7 @@ export var DefaultTheme = {
     'navigation_background': '#FFF',
     'navigation_color': '#282C31',
   },
+  breakpoints,
   fonts,
   mixin: {
     font: (type, size) => {
