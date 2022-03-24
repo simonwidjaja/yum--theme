@@ -11,6 +11,9 @@ import useResizeObserver from '../hooks/useResizeObserver';
  * @param {Object} props.config.primaryNavigation[].label Label
  * @param {String|Function} props.config.primaryNavigation[].href Href. Can be a URL or a function
  * @param {Array} props.config.primaryNavigation[].children Children
+ * @param {String} props.config.primaryNavigation[].children[].icon Icon (e.g. eye|bulb|aim|rocket|download )
+ * @param {String} props.config.primaryNavigation[].children[].label Label
+ * @param {String} props.config.primaryNavigation[].children[].brief Brief description
  */
 export default function Navigation(props) {
   const [open, set_open] = useState(false);
@@ -51,7 +54,7 @@ export default function Navigation(props) {
     <Component className="Navigation">
       <yum.Container>
         <div className="brand" onClick={()=>{window.open('/', '_self')}}>
-          #BRAND <yum.Icon />
+          #BRAND <yum.Icon type="eye"/>
         </div>
         <div className="narrow-menu-trigger" ref={toggleRef} onClick={toggle}>
           <div className="active">☰</div>
@@ -62,37 +65,35 @@ export default function Navigation(props) {
           {
             props.config.primaryNavigation.map((item, index) => {
               return (
-                <>
-                  <div className="link" key={`primary-navigation-item-${index}`}>
-                    <div className="link-wrapper" onClick={typeof(item.href) == "function" ? item.href : null}>
-                      <Link href={typeof(item.href) == "string" ? item.href : '#'}>{item.label}</Link>
-                    </div>
-                    { item.children &&
-                      <div className="children">
-                        <div className="title">{item.label}</div>
-                        {
-                          item.children.map((child, childIndex) => {
-                            return (
-                              <div className="child" key={`primary-navigation-item-child-${childIndex}`}>
-                                <div className="icon">
-                                  <yum.Icon type={child.icon} size="30px" color="var(--coal-lighter)" />
+                <div className="link" key={`primary-navigation-item-${index}`}>
+                  <div className="link-wrapper" onClick={typeof(item.href) == "function" ? item.href : null}>
+                    <Link href={typeof(item.href) == "string" ? item.href : '#'}>{item.label}</Link>
+                  </div>
+                  { item.children &&
+                    <div className="children">
+                      <div className="title">{item.label}</div>
+                      {
+                        item.children.map((child, childIndex) => {
+                          return (
+                            <div className="child" key={`primary-navigation-item-child-${childIndex}`}>
+                              <div className="icon">
+                                <yum.Icon type={child.icon || 'default'} size="30px" color="var(--coal-lighter)" />
+                              </div>
+                              <div className="content">
+                                <div className="child-link">
+                                  <Link href={typeof(item.href) == "string" ? item.href : '#'}>{child.label}</Link><span className="arrow">⭢</span>
                                 </div>
-                                <div className="content">
-                                  <div className="child-link">
-                                    <Link href={typeof(item.href) == "string" ? item.href : '#'}>{child.label}</Link><span className="arrow">⭢</span>
-                                  </div>
-                                  <div className="child-brief">
-                                    {child.brief}
-                                  </div>
+                                <div className="child-brief">
+                                  {child.brief}
                                 </div>
                               </div>
-                            )
-                          })
-                        }
-                      </div>
-                    }
-                  </div>
-                </>
+                            </div>
+                          )
+                        })
+                      }
+                    </div>
+                  }
+                </div>
               )
             })
           }
@@ -133,7 +134,6 @@ box-shadow: 0px 25px 25px rgba(0,0,0,.03);
         align-items: stretch;
         padding-top: 26px;
         .link {
-          // border: 1px solid blue;
           padding-bottom: 10px;
           margin-bottom: 0;
 
@@ -146,8 +146,8 @@ box-shadow: 0px 25px 25px rgba(0,0,0,.03);
             max-width: 800px;
             min-height: 100px;
             background-color: white;
-            border-radius: 18px;
-            box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+            border-radius: 12px;
+            box-shadow: rgba(136, 165, 191, 0.48) 3px 2px 16px 0px, rgba(255, 255, 255, 0.8) -3px -2px 16px 0px;
             padding: 40px 40px 60px 40px;
 
             .title {

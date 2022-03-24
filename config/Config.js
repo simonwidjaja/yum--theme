@@ -30,7 +30,7 @@ export default {
           brief: 'Effizient erklären, überzeugen und verkaufen',
         },
         {
-          icon: 'shopping',
+          icon: 'code',
           label: 'Programmierung',
           brief: 'Web, App und Custom Solutions',
         },
