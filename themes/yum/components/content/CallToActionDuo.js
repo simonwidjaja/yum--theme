@@ -11,30 +11,28 @@ export default function CallToActionDuo({ items }) {
   // console.log('items', items.length, items.map);
   return (
     <Component>
-      <Container>
-        <Row>
-          {/* {items.map((item, index) => {
-            return <h1>TEST</h1>
-          })} */}
-          {items.map((item, index) => {
-            const { title, text, buttonLabel, href, baseColor, inverted } = item;
-              return (
-                <Col
-                  key={index}
-                  md={{ offset: 0, span: 6 }}
-                  style={{ display: "flex" }}
-                >
-                  <div className={`item ${inverted ? 'inverted' : ''}` } style={{backgroundColor: baseColor, borderColor: !inverted ? "var(--coal)" : baseColor}}>
-                    <h3>{title}</h3>
-                    <p>{text}</p>
-                    <Button href={href} inverted={inverted}>{buttonLabel}</Button>
-                  </div>
-                </Col>
-              )
-            })
-          }
-        </Row>
-      </Container>
+      <Row>
+        {/* {items.map((item, index) => {
+          return <h1>TEST</h1>
+        })} */}
+        {items.map((item, index) => {
+          const { title, text, buttonLabel, href, baseColor, inverted } = item;
+            return (
+              <Col
+                key={index}
+                md={{ offset: 0, span: 6 }}
+                style={{ display: "flex" }}
+              >
+                <div className={`item ${inverted ? 'inverted' : ''}` } style={{backgroundColor: baseColor, borderColor: !inverted ? "var(--coal)" : baseColor}}>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                  <Button href={href} inverted={inverted}>{buttonLabel}</Button>
+                </div>
+              </Col>
+            )
+          })
+        }
+      </Row>
     </Component>
   );
 };
