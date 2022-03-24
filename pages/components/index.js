@@ -13,7 +13,7 @@ export default function index(props) {
         <Spacer height="100"></Spacer>
 
         <Container>
-          <Link href="/designsystem/">Design System</Link>
+          <Link href="/components/">Components</Link>
         </Container>
 
         <Spacer height="100"></Spacer>

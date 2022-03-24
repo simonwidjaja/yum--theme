@@ -66,7 +66,8 @@ export default function Layout(props) {
       </Head>
 
       
-      <Navigation config={props.config}></Navigation>
+      {/* <Navigation config={props.config}></Navigation> */}
+      {props.navigation}
  
       <main>
         {props.children}

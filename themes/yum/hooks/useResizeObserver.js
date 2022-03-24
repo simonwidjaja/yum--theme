@@ -5,7 +5,7 @@
 /*
 // USAGE
 export default function Navigation(props) {
-  const resizeObserver = useResizeObserver();
+  const resizeObserver = useResizeObserver(({width, height}) => {console.log('RESIZED');});
   return (
     <Component>
       <div ref={resizeObserver.ref} className="fixed-nav">
@@ -20,7 +20,7 @@ import { useRef, useCallback, useEffect, useState } from 'react';
 import { ResizeObserver as ResizeObserverPolyfill } from '@juggle/resize-observer';
 
 
-export default function useResizeObserver() {
+export default function useResizeObserver(cb) {
   // Removed by simonwidjaja (preventing "window is undefined" problem)
   // const ResizeObserver = window.ResizeObserver || ResizeObserverPolyfill;
   const [size, setSize] = useState({ width: 0, height: 0 });
@@ -29,6 +29,7 @@ export default function useResizeObserver() {
   const onResize = useCallback(entries => {
     const { width, height } = entries[0].contentRect;
     setSize({ width, height });
+    cb && cb({ width, height });
   }, []);
 
   const ref = useCallback(

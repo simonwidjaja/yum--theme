@@ -34,8 +34,8 @@ export var DefaultTheme = {
     'snow-light': '#F0F2F4',
     
     'coal': '#1A2327',
-    'coal-lightest': '#F0F1F1',
-    'coal-lighter': '#868B8C',
+    'coal-lightest': '#E4E7E8',
+    'coal-lighter': '#A6ABAC',
     'coal-light': '#31393D',
     'coal-dark': '#151D21',
     'coal-darker': '#0D1519',

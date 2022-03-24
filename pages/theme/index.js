@@ -32,12 +32,6 @@ export default function index(props) {
 
         <Spacer height="100"></Spacer>
 
-        <Container>
-          <Link href="/designsystem/">Design System</Link>
-        </Container>
-
-        <Spacer height="100"></Spacer>
-
         <Container style={{textAlign: 'center'}}>
           <Headline type="h1">Colors</Headline>
         </Container>

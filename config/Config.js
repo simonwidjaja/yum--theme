@@ -21,14 +21,50 @@ export default {
   preNavigationRibbon: <></>,
   primaryNavigation: [
     {
-      label: 'Tools',
-      icon: 'pi pi-fw pi-briefcase',
-      items: [
+      label: 'Full Service',
+      href: null,
+      children: [
         {
-          template: (item, options) => {
-            return (<div style={{minWidth: '400px'}}></div>)
-          }
+          icon: 'video',
+          label: 'Videos für Marketing und Kommunikation',
+          brief: 'Effizient erklären, überzeugen und verkaufen',
         },
+        {
+          icon: 'shopping',
+          label: 'Programmierung',
+          brief: 'Web, App und Custom Solutions',
+        },
+      ]
+    },
+    {
+      label: 'NEW ITEM',
+      href: '/de/contact' 
+    },
+    {
+      label: 'NEW ITEM',
+      // href: () => { alert('nav item clicked') },
+      children: [
+        {
+          label: 'Child 1',
+        },
+        {
+          label: 'Child 2',
+        },
+      ]       
+    },
+    // {
+    //   label: 'NEW ITEM',
+    //   href: () => { alert('nav item clicked') } 
+    // },
+    // {
+    //   label: 'Tools',
+    //   icon: 'pi pi-fw pi-briefcase',
+    //   items: [
+    //     {
+    //       template: (item, options) => {
+    //         return (<div style={{minWidth: '400px'}}></div>)
+    //       }
+    //     },
         // {
         //   label: 'All Tool',
         //   icon: 'pi pi-fw pi-briefcase',
@@ -45,78 +81,78 @@ export default {
         //   command: () => { window.location = '/toolbelt' }          
         // },
 
-        {
-          template: (item, options) => {
-            return (
-              <a href="/hero">
-                <div className="yumtastic-product">
-                  <img src="/images/nav_hero.svg" />
-                </div>
-              </a>
-            )
-          }          
-        },
-        {
-          template: (item, options) => {
-            return (
-              <a href="/toolbelt">
-                <div className="yumtastic-product">
-                  <img src="/images/nav_toolbelt.svg" />
-                </div>
-              </a>
-            )
-          }          
-        },
-      ]
-    },
-    {
-      label: 'Trainings',
-      icon: 'pi pi-fw pi-compass',
-      items: [
-        {
-          label: 'Coming soon...',
-          icon: 'pi pi-fw pi-compass',
-          command: () => {
-            // window.location = '/#workshops'
-          }          
-        },
-        {
-          template: (item, options) => {
-            return (<div style={{minWidth: '400px'}}></div>)
-          }
-        },
-        // ...getWorkshops().map((item, index) => { return {
-        //   label: item.title.title,
-        //   icon: 'pi pi-fw pi-briefcase',
-        //   command: () => {
-        //     window.location = `/workshops/lac/${item.id}`
-        //   }  
-        // }}),
-      ]
-    },
-    // {
-    //   label: 'Learning',
-    //   icon: 'pi pi-fw pi-compass',
-    //   items: [{
-    //       label: 'Coming soon...',
-    //       icon: 'pi pi-fw pi-align-left'
+    //     {
+    //       template: (item, options) => {
+    //         return (
+    //           <a href="/hero">
+    //             <div className="yumtastic-product">
+    //               <img src="/images/nav_hero.svg" />
+    //             </div>
+    //           </a>
+    //         )
+    //       }          
     //     },
-
+    //     {
+    //       template: (item, options) => {
+    //         return (
+    //           <a href="/toolbelt">
+    //             <div className="yumtastic-product">
+    //               <img src="/images/nav_toolbelt.svg" />
+    //             </div>
+    //           </a>
+    //         )
+    //       }          
+    //     },
     //   ]
     // },
-    {
-      label: 'Contact',
-      icon: 'pi pi-fw pi-envelope',
-      command: () => {
-        window.location = '/contact'
-      }      
-    },
-    {
-      label: 'Hire Us',
-      icon: 'pi pi-fw pi-user',
-      command: () => {
-        window.location = '/contact'
-      }
-    },
+    // {
+    //   label: 'Trainings',
+    //   icon: 'pi pi-fw pi-compass',
+    //   items: [
+    //     {
+    //       label: 'Coming soon...',
+    //       icon: 'pi pi-fw pi-compass',
+    //       command: () => {
+    //         // window.location = '/#workshops'
+    //       }          
+    //     },
+    //     {
+    //       template: (item, options) => {
+    //         return (<div style={{minWidth: '400px'}}></div>)
+    //       }
+    //     },
+    //     // ...getWorkshops().map((item, index) => { return {
+    //     //   label: item.title.title,
+    //     //   icon: 'pi pi-fw pi-briefcase',
+    //     //   command: () => {
+    //     //     window.location = `/workshops/lac/${item.id}`
+    //     //   }  
+    //     // }}),
+    //   ]
+    // },
+    // // {
+    // //   label: 'Learning',
+    // //   icon: 'pi pi-fw pi-compass',
+    // //   items: [{
+    // //       label: 'Coming soon...',
+    // //       icon: 'pi pi-fw pi-align-left'
+    // //     },
+
+    // //   ]
+    // // },
+    // {
+    //   label: 'Contact',
+    //   icon: 'pi pi-fw pi-envelope',
+    //   command: () => {
+    //     window.location = '/contact'
+    //   }      
+    // },
+    // {
+    //   label: 'Hire Us',
+    //   icon: 'pi pi-fw pi-user',
+    //   command: () => {
+    //     window.location = '/contact'
+    //   }
+    // },
   ]
 }

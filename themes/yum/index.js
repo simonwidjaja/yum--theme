@@ -9,6 +9,7 @@
 import DefaultTheme from './theme/DefaultTheme';
 // Layout
 import Layout from './layout/Layout';
+import Navigation from './layout/Navigation';
 // Core
 import Version from './components/core/Version'
 import MetaLabel from './components/core/MetaLabel'
@@ -30,6 +31,7 @@ import Spinner from './components/core/Spinner'
 import Card from './components/core/Card'
 import CardSet from './components/core/CardSet'
 import Emoji from './components/core/Emoji'
+import Icon from './components/core/Icon'
 import Facts from './components/core/Facts'
 // Content
 import CallToAction1 from './components/content/CallToAction1'
@@ -58,6 +60,8 @@ export {
   Version,
   DefaultTheme,
   Layout,
+  Navigation,
+
   Section,
   Container,
   Row,
@@ -76,6 +80,7 @@ export {
   Card, CardSet,
   List,
   Emoji,
+  Icon,
   Facts,
 
   HeadlineAndText,
