@@ -9,7 +9,11 @@ import Footer from '@@components/Footer'
 export default function Layout(props) {
   return (
     <ThemeProvider theme={Theme}>
-      <YumLayout config={Config} page={props.page} navigation={<yum.Navigation config={Config} />} footer={<Footer />} style={props.style}>
+      <YumLayout config={Config} 
+                 page={props.page} 
+                 navigation={<yum.Navigation config={Config} />} 
+                 footer={<Footer />} 
+                 style={props.style}>
         {props.children}
       </YumLayout>
     </ThemeProvider>

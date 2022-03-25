@@ -65,7 +65,6 @@ export default function Layout(props) {
         <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_o5hd5vvqpoqiwwmi.css" />
       </Head>
 
-      {props.config.ribbon}
       {props.navigation}
  
       <main>

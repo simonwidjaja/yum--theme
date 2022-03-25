@@ -4,12 +4,12 @@ import * as yum from '@@yum'
 export default function PreNavigationRibbon(props) {
   return (
     <Component onClick={() => {location = '/trainings/big-picture'}}>
-      <yum.Container>
         <div className="message">
           🎉 Kostenloses Webinar: "Interaktive Web Animationen" (#DATUM#)  
         </div>
-        <button>ZUM EVENT</button>
-      </yum.Container>
+        <div>
+          <button>ZUM EVENT</button>
+        </div>
     </Component>
   )
 }
@@ -25,25 +25,26 @@ const Component = styled.div`
   // background-color: var(--coal);
   cursor: pointer;
 
-  .Container {
-    display: flex;
-    // justify-content: space-between;
-    // justify-content: flex-end;
-    justify-content: center;
+  display: flex;
+  // justify-content: space-between;
+  // justify-content: flex-end;
+  justify-content: center;
 
-    padding: 6px 15px;
-    color: white;
-    font-size: 12px;
-  }
+  padding: 3px 15px;
+  color: white;
+  font-size: 12px;
 
   .message {
+    display: flex;
+    align-items: center;    
     margin-right: 12px;
   }
 
   button {
     background-color: transparent;
-    border: 1.6px solid white;;
-    padding: 0px 14px;
+    border: 1.4px solid white;;
+    padding: 1px 14px;
+    height: auto;
     // margin: 0 20px;
     border-radius: 100px;
     color: white;

@@ -36,9 +36,13 @@ export default function Navigation(props) {
 
   useEffect(() => {
     function handleResize() {
-      window.matchMedia(`(min-width: ${DefaultTheme.breakpoints.lg})`).matches
+      let notMobile = window.matchMedia(`(min-width: ${DefaultTheme.breakpoints.lg})`).matches;
+      // Set/remove "mobile" class
+      notMobile
         ? componentRef.current.classList.remove('mobile')
         : componentRef.current.classList.add('mobile');
+      // Push main content down the exact height of Navigation
+      document.querySelector('main').style.marginTop = notMobile ? window.getComputedStyle(document.querySelector('.Navigation')).height : 0;
     }
     window.addEventListener('resize', handleResize);
     handleResize();
@@ -51,6 +55,11 @@ export default function Navigation(props) {
 
   return (
     <Component ref={componentRef} className="Navigation">
+
+      <div className="ribbon">
+        {props.config.ribbon}
+      </div>
+
       <yum.Container>
         <div className="brand" onClick={()=>{window.open('/', '_self')}}>
           {props.config.site.brand}
@@ -59,7 +68,6 @@ export default function Navigation(props) {
           <div className="active">☰</div>
           <div>✕</div>
         </div>
-        <div className="separator"></div>
         <div className="links" ref={linksRef}>
           {
             props.config.primaryNavigation.map((item, index) => {
@@ -111,9 +119,11 @@ export default function Navigation(props) {
 ////////////////////////////////////////////////////
 
 const Component = styled.div`
+  background-color: white;
   box-shadow: 0px 25px 25px rgba(0,0,0,.03);
+  z-index: 1;
 
-  .Container {
+  >.Container {
     height: 60px;
     position: relative;
     display: flex;
@@ -123,8 +133,10 @@ const Component = styled.div`
     flex-wrap: wrap;
   }
 
-  .separator {
-    flex: 1 1 100%;
+  .ribbon {
+    min-height: 28px;
+    line-height: 14px;
+    margin-top: calc(height);
   }
 
   .brand {
@@ -194,6 +206,8 @@ const Component = styled.div`
     padding-right: 20px;
     >div {
       display: none;
+      width: 26px;
+      height: 26px;      
       cursor: pointer;
       &.active {
         display: block;
@@ -272,6 +286,11 @@ const Component = styled.div`
 
   &:not(.mobile) {
     ${props => props.theme?.mq?.min('lg')} {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+
       .Container {
         flex-direction: row;
         .narrow-menu-trigger {
