@@ -18,6 +18,7 @@ import useResizeObserver from '../hooks/useResizeObserver';
 export default function Navigation(props) {
   const [open, set_open] = useState(false);
   
+  const componentRef = React.createRef();
   const linksRef = React.createRef();
   const toggleRef = React.createRef();
 
@@ -33,25 +34,23 @@ export default function Navigation(props) {
     set_open(!open);
   }
 
-  // Not needed
-  // useEffect(() => {
-  //   function handleResize() {
-  //     // console.log('resized to: ', window.innerWidth, 'x', window.innerHeight, open, parseInt(DefaultTheme.breakpoints.lg))
-  //     if (open && window.innerWidth >= parseInt(DefaultTheme.breakpoints.lg)) {
-  //       console.log('Automatically close mobile navigation');
-  //       // toggle();
-  //     }
-  //   }
-  //   window.addEventListener('resize', handleResize)
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize)
-  //   }
-  // })
+  useEffect(() => {
+    function handleResize() {
+      window.matchMedia(`(min-width: ${DefaultTheme.breakpoints.lg})`).matches
+        ? componentRef.current.classList.remove('mobile')
+        : componentRef.current.classList.add('mobile');
+    }
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  })
 
   // const resizeObserver = useResizeObserver(({width, height}) => { console.log('open', open);  /*if (width > 1200 && open) toggle();*/ });
 
   return (
-    <Component className="Navigation">
+    <Component ref={componentRef} className="Navigation">
       <yum.Container>
         <div className="brand" onClick={()=>{window.open('/', '_self')}}>
           #BRAND <yum.Icon type="eye"/>
@@ -108,7 +107,7 @@ export default function Navigation(props) {
 ////////////////////////////////////////////////////
 
 const Component = styled.div`
-box-shadow: 0px 25px 25px rgba(0,0,0,.03);
+  box-shadow: 0px 25px 25px rgba(0,0,0,.03);
 
   .Container {
     height: 80px;
@@ -137,6 +136,12 @@ box-shadow: 0px 25px 25px rgba(0,0,0,.03);
           padding-bottom: 10px;
           margin-bottom: 0;
 
+          &:hover {
+            .link-wrapper > a {
+              border-bottom: 4px solid var(--purple);
+            }
+          }
+
           .children {
             display: none;
             position: absolute;
@@ -151,6 +156,7 @@ box-shadow: 0px 25px 25px rgba(0,0,0,.03);
             padding: 40px 40px 60px 40px;
 
             .title {
+              display: block;
               margin-bottom: 20px;
               color: var(--coal-lighter);
               opacity: 0.7;
@@ -158,8 +164,7 @@ box-shadow: 0px 25px 25px rgba(0,0,0,.03);
 
             .child {
               display: flex;
-              margin-bottom: 10px;
-              cursor: pointer; 
+
               .icon {
                 flex: 0 0 40px;
                 margin-top: 4px;
@@ -183,9 +188,7 @@ box-shadow: 0px 25px 25px rgba(0,0,0,.03);
                   }
                 }
                 .child-brief {
-                  margin-top: -4px;
                   font-size: 14px;
-                  color: var(--coal-lighter);
                 }
               }
 
@@ -246,11 +249,29 @@ box-shadow: 0px 25px 25px rgba(0,0,0,.03);
         padding-bottom: 4px;
       }
 
-      &:hover {
-        a {
-          border-bottom: 4px solid var(--purple);
+      .children {
+        .title {
+          display: none;
         }
-      }
+        .child {
+          margin: 8px 0;
+          cursor: pointer; 
+          .content {
+            .child-link {
+              a {
+                border: none !important;
+                margin: 0;
+                padding: 0;
+              }              
+            }
+          }
+          .child-brief {
+            margin-top: -4px;
+            color: var(--coal-lighter);
+            font-size: 12px;
+          }               
+        }
+      }      
     }
   }
 
@@ -267,5 +288,53 @@ box-shadow: 0px 25px 25px rgba(0,0,0,.03);
         display: block;
       }
     }
+  }
+
+  &.mobile {
+    .Container {
+      max-width: 100%;
+    }
+    .links {
+      background-color: white;
+      width: 100%;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      left: 0;    
+      box-shadow: rgba(136, 165, 191, 0.2) 3px 20px 16px 0px, rgba(255, 255, 255, 0.8) -3px -2px 16px 0px;
+      padding-bottom: 80px;
+
+      .link {
+        width: 100%;
+        margin: 4px 0;
+      }
+
+      .children {
+        padding-bottom: 10px;
+        .child {
+          .icon {
+            display: none;
+          }
+          .content {
+            .child-link {
+              font-size: 20px;
+              line-height: 22px;
+              .arrow {
+                margin-left: 4px;
+              }
+            }
+            .child-brief {
+              margin-top: 3px;
+              font-size: 14px;
+              line-height: 16px;
+            }
+          }            
+        }
+      }
+    }
+  }
+
+  &:not(.mobile) {
+    
   }
 `
