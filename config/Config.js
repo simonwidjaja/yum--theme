@@ -1,5 +1,5 @@
 import Link from 'next/link'
-// import PreNavigationRibbon from '@@components/PreNavigationRibbon'
+import Ribbon from '@@components/ribbons/Template'
 import { getWorkshops } from '@@data/workshops'
 
 export default {
@@ -17,13 +17,23 @@ export default {
   },
   formSubmissionURL: 'https://hq.xdhero.com/xdhero/inquiry',
   hubspotTrackingURL: '//js-eu1.hs-scripts.com/##########.js', // e.g. '//js-eu1.hs-scripts.com/123456789.js' 
-  // preNavigationRibbon: <PreNavigationRibbon />,
-  preNavigationRibbon: <></>,
+  ribbon: <Ribbon />,
   primaryNavigation: [
     {
       label: 'Full Service',
       href: null,
       children: [
+        {
+          icon: 'video',
+          label: 'Videos für Marketing und Kommunikation',
+          brief: 'Effizient erklären, überzeugen und verkaufen',
+          href: '/test'
+        },
+        {
+          icon: 'code',
+          label: 'Programmierung',
+          brief: 'Web, App und Custom Solutions',
+        },
         {
           icon: 'video',
           label: 'Videos für Marketing und Kommunikation',
@@ -37,122 +47,48 @@ export default {
       ]
     },
     {
-      label: 'NEW ITEM',
+      label: 'Vorgehensweise',
       href: '/de/contact' 
     },
     {
-      label: 'NEW ITEM',
+      label: 'Tools',
       // href: () => { alert('nav item clicked') },
       children: [
         {
-          label: 'Child 1',
+          icon: 'video',
+          label: 'Toolbelt for Adobe Animate',
+          brief: 'Effizient erklären, überzeugen und verkaufen',
         },
         {
-          label: 'Child 2',
+          icon: 'video',
+          label: 'Hero for Adobe XD',
+          brief: 'Effizient erklären, überzeugen und verkaufen',
         },
       ]       
     },
-    // {
-    //   label: 'NEW ITEM',
-    //   href: () => { alert('nav item clicked') } 
-    // },
-    // {
-    //   label: 'Tools',
-    //   icon: 'pi pi-fw pi-briefcase',
-    //   items: [
-    //     {
-    //       template: (item, options) => {
-    //         return (<div style={{minWidth: '400px'}}></div>)
-    //       }
-    //     },
-        // {
-        //   label: 'All Tool',
-        //   icon: 'pi pi-fw pi-briefcase',
-        //   command: () => { window.location = '/#' }          
-        // },
-        // {
-        //   label: 'Hero for Adobe XD',
-        //   icon: 'pi pi-fw pi-briefcase',
-        //   command: () => { window.location = '/hero' }          
-        // },
-        // {
-        //   label: 'Toolbelt for Adobe Animate',
-        //   icon: 'pi pi-fw pi-briefcase',
-        //   command: () => { window.location = '/toolbelt' }          
-        // },
-
-    //     {
-    //       template: (item, options) => {
-    //         return (
-    //           <a href="/hero">
-    //             <div className="yumtastic-product">
-    //               <img src="/images/nav_hero.svg" />
-    //             </div>
-    //           </a>
-    //         )
-    //       }          
-    //     },
-    //     {
-    //       template: (item, options) => {
-    //         return (
-    //           <a href="/toolbelt">
-    //             <div className="yumtastic-product">
-    //               <img src="/images/nav_toolbelt.svg" />
-    //             </div>
-    //           </a>
-    //         )
-    //       }          
-    //     },
-    //   ]
-    // },
-    // {
-    //   label: 'Trainings',
-    //   icon: 'pi pi-fw pi-compass',
-    //   items: [
-    //     {
-    //       label: 'Coming soon...',
-    //       icon: 'pi pi-fw pi-compass',
-    //       command: () => {
-    //         // window.location = '/#workshops'
-    //       }          
-    //     },
-    //     {
-    //       template: (item, options) => {
-    //         return (<div style={{minWidth: '400px'}}></div>)
-    //       }
-    //     },
-    //     // ...getWorkshops().map((item, index) => { return {
-    //     //   label: item.title.title,
-    //     //   icon: 'pi pi-fw pi-briefcase',
-    //     //   command: () => {
-    //     //     window.location = `/workshops/lac/${item.id}`
-    //     //   }  
-    //     // }}),
-    //   ]
-    // },
-    // // {
-    // //   label: 'Learning',
-    // //   icon: 'pi pi-fw pi-compass',
-    // //   items: [{
-    // //       label: 'Coming soon...',
-    // //       icon: 'pi pi-fw pi-align-left'
-    // //     },
-
-    // //   ]
-    // // },
-    // {
-    //   label: 'Contact',
-    //   icon: 'pi pi-fw pi-envelope',
-    //   command: () => {
-    //     window.location = '/contact'
-    //   }      
-    // },
-    // {
-    //   label: 'Hire Us',
-    //   icon: 'pi pi-fw pi-user',
-    //   command: () => {
-    //     window.location = '/contact'
-    //   }
-    // },
+    {
+      label: 'Über uns',
+      href: '/de/contact' 
+    },
+    {
+      label: 'Trainings',
+      // href: () => { alert('nav item clicked') },
+      children: [
+        {
+          icon: 'video',
+          label: 'Videos für Marketing und Kommunikation',
+          brief: 'Effizient erklären, überzeugen und verkaufen',
+        },
+        {
+          icon: 'video',
+          label: 'Videos für Marketing und Kommunikation',
+          brief: 'Effizient erklären, überzeugen und verkaufen',
+        },
+      ]       
+    },
+    {
+      label: 'Kontakt',
+      href: '/de/contact' 
+    },    
   ]
 }
