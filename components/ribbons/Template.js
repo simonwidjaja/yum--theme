@@ -30,7 +30,7 @@ const Component = styled.div`
   // justify-content: flex-end;
   justify-content: center;
 
-  padding: 3px 15px;
+  padding: 4px 15px;
   color: white;
   font-size: 12px;
 
@@ -49,6 +49,7 @@ const Component = styled.div`
     border-radius: 100px;
     color: white;
     white-space: nowrap;
+    font-size: 10px;
   }
 
   &:hover {

@@ -16,13 +16,21 @@ export default function Footer(props) {
 
 const Component = styled.div`
   
-  ${props => props.theme?.mixin?.fontXL};
+  ${props => props.theme?.mixin?.font};
 
-  padding: 40px;
+  background-color: var(--coal);
+
+  margin-top: 120px;
+  padding: 60px 0 120px 0;
   background-color: ${props => props.theme?.colors?.black};
   color: ${props => props.theme?.colors?.white};
-  font-size: 16px;
+  font-size: 14px;
   a {
     color: ${props => props.theme?.colors?.white};
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `

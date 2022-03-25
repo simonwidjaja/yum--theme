@@ -138,22 +138,24 @@ export default function index(props) {
         </Container>        
 
         <XrayLabel>CallToActionDuo</XrayLabel>
-        <yum.CallToActionDuo items={[
-          {
-            title: "Lorem ipsum dolor sit amet consectetur",
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consectetur quia exercitationem, assumenda possimus consequuntur blanditiis commodi totam sapiente pariatur tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consectetur quia exercitationem, assumenda possimus consequuntur blanditiis commodi totam sapiente pariatur tempora.",
-            buttonLabel: "Anfragen",
-            baseColor: "var(--white)",
-            inverted: false,
-          },
-          {
-            title: "Lorem ipsum dolor sit amet consectetur",
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consectetur quia exercitationem, assumenda possimus consequuntur blanditiis commodi totam sapiente pariatur tempora.",
-            buttonLabel: "Anfragen",
-            baseColor: "var(--purple)",
-            inverted: true,
-          },
-        ]} />
+        <Container>
+          <yum.CallToActionDuo items={[
+            {
+              title: "Lorem ipsum dolor sit amet consectetur",
+              text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consectetur quia exercitationem, assumenda possimus consequuntur blanditiis commodi totam sapiente pariatur tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consectetur quia exercitationem, assumenda possimus consequuntur blanditiis commodi totam sapiente pariatur tempora.",
+              buttonLabel: "Anfragen",
+              baseColor: "var(--white)",
+              inverted: false,
+            },
+            {
+              title: "Lorem ipsum dolor sit amet consectetur",
+              text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consectetur quia exercitationem, assumenda possimus consequuntur blanditiis commodi totam sapiente pariatur tempora.",
+              buttonLabel: "Anfragen",
+              baseColor: "var(--purple)",
+              inverted: true,
+            },
+          ]} />
+        </Container>
 
       </Component>
     </Layout>
