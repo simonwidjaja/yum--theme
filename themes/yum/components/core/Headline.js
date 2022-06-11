@@ -21,7 +21,7 @@ export default function Headline(props) {
 
   return (
     <Component className={"Headline "+className} style={style} props={props}>
-      {props.separator && <Separator />}
+      {props.separator && <Separator inverted={props.inverted} />}
       {props.meta && <MetaLabel>{props.meta}</MetaLabel> }
       <h1 className={`${font} margin-top-none margin-bottom-none`}>{props.title || props.children}</h1>
       {props.sub && <div className="sub font2-p">{props.sub}</div> }

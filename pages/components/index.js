@@ -107,6 +107,12 @@ export default function index(props) {
           ]} iconBaseColor="var(--purple)" iconColor="var(--coal)" />
         </Container>
 
+        <XrayLabel>InfinityHorizontalAnimation_A</XrayLabel>
+        <section>
+          <yum.InfinityHorizontalAnimation_A></yum.InfinityHorizontalAnimation_A>
+        </section>
+
+
         <XrayLabel>CardSet</XrayLabel>
         <Container>
           <CardSet cards={[

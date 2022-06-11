@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "---": "---",
-    "propagate-theme-update": "gulp --gulpfile ./gulp/propagate-theme-update.js"
+    "propagate-theme-update": "gulp --gulpfile ./gulp/propagate-theme-update.js",
+    "propagate-theme-public-update": "gulp --gulpfile ./gulp/propagate-theme-public-update.js"
   },
   "dependencies": {
     "@juggle/resize-observer": "^3.3.1",

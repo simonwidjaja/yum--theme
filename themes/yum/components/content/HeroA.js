@@ -9,7 +9,7 @@ export default function HeroA(props) {
   return (
     <Component className={"HeroA "+className} style={style} props={props}>
       <yum.Row>
-        <yum.Col>
+        <yum.Col xs={{span: 12}} lg={{span: 6}} className="title-col">
           <yum.Separator />
           <yum.Headline>{props.title}</yum.Headline>
           {props.text}
@@ -32,4 +32,11 @@ const Component = styled.div`
 
   // ${props => props.theme?.mq?.min('lg')} {
   // }  
+
+  .title-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;    
+  }
 `

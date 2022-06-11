@@ -24,6 +24,6 @@ const Component = styled.div`
     margin: 10px 0 !important;
     border: none;
     opacity: 1;
-    background-color: ${attr => attr.props.color || 'var(--purple)'};
+    background-color: ${attr => attr.props.color || attr.props.inverted ? 'var(--white)' : 'var(--purple)'};
   }
 `

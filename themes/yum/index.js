@@ -53,8 +53,10 @@ import HubspotForm from './components/forms/HubspotForm'
 // Special
 import WorkshopTeaser from './components/special/WorkshopTeaser'
 import ReferenceTile from './components/special/ReferenceTile'
+import InfinityHorizontalAnimation_A from './components/special/InfinityHorizontalAnimation_A';
 // Internal
 import XrayLabel from './components/internal/XrayLabel';
+// WIP
 
 export {
   Version,
@@ -97,6 +99,7 @@ export {
   // Special
   WorkshopTeaser,
   ReferenceTile,
+  InfinityHorizontalAnimation_A,
   
   // Forms
   FormGroup, FormLabel, FormControl, FormSelect, 
@@ -104,4 +107,6 @@ export {
 
   // Internal
   XrayLabel,
+
+  // WIP
 }

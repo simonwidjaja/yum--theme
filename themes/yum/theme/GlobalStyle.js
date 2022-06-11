@@ -177,6 +177,18 @@ export default createGlobalStyle`
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
+  h1 {
+    ${DefaultTheme.mixin.font('primary', 'h1')};
+  }
+  h2 {
+    ${DefaultTheme.mixin.font('primary', 'h2')};
+  }
+  h3 {
+    ${DefaultTheme.mixin.font('primary', 'h3')};
+  }
+  h4 {
+    ${DefaultTheme.mixin.font('primary', 'h4')};
+  }
   * {
     background-repeat: no-repeat;
     background-position: 50% 50%;

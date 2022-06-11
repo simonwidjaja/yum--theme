@@ -8,7 +8,7 @@ export default function PreNavigationRibbon(props) {
           🎉 Kostenloses Webinar: "Interaktive Web Animationen" (#DATUM#)  
         </div>
         <div>
-          <button>ZUM EVENT</button>
+          <button>⭢</button>
         </div>
     </Component>
   )
@@ -30,9 +30,9 @@ const Component = styled.div`
   // justify-content: flex-end;
   justify-content: center;
 
-  padding: 4px 15px;
+  padding: 6px 15px;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
 
   .message {
     display: flex;

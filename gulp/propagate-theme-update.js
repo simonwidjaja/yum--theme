@@ -5,25 +5,24 @@
 const { watch } = require('gulp');
 const { src, dest } = require('gulp');
 
-function copy() {
-  return src('input/*.js')
-    .pipe(dest('output/'));
+
+function run(cb) {
+  console.log('[ propagate-theme-update : run() ]');
+  src('../themes/**/*.*')
+    .pipe(dest('/Users/simonwidjaja/Desktop/Data/Repos/simonwidjaja/trendspurt.com/themes/'))
+    .pipe(dest('/Users/simonwidjaja/Desktop/Data/Repos/simonwidjaja/modernwebacademy.de/themes/'))
+    ;
+  cb();
 }
 
 exports.default = (cb) => {
   console.log('[ propagate-theme-update ]');
 
   watch(['../themes/**/*.*'], function(cb) {
-    src('../themes/**/*.*')
-      .pipe(dest('/Users/simonwidjaja/Desktop/Data/Repos/simonwidjaja/trendspurt.com/themes/'))
-    cb();
+    run(cb)
   });
 
-  watch(['../public/themes/yum/**/*.*'], function(cb) {
-    src('../public/themes/yum/**/*.*')
-      .pipe(dest('/Users/simonwidjaja/Desktop/Data/Repos/simonwidjaja/trendspurt.com/public/themes/yum/'))
-    cb();
-  });
+  run(cb);
 
   cb()
 }

@@ -12,9 +12,6 @@ export default function CallToActionDuo({ items }) {
   return (
     <Component>
       <Row>
-        {/* {items.map((item, index) => {
-          return <h1>TEST</h1>
-        })} */}
         {items.map((item, index) => {
           const { title, text, buttonLabel, href, baseColor, inverted } = item;
             return (
@@ -23,7 +20,7 @@ export default function CallToActionDuo({ items }) {
                 md={{ offset: 0, span: 6 }}
                 style={{ display: "flex" }}
               >
-                <div className={`item ${inverted ? 'inverted' : ''}` } style={{backgroundColor: baseColor, borderColor: !inverted ? "var(--coal)" : baseColor}}>
+                <div className={`item ${inverted ? 'inverted' : ''}` } style={{backgroundColor: baseColor || 'white', borderColor: !inverted ? "var(--coal)" : baseColor}}>
                   <h3>{title}</h3>
                   <p>{text}</p>
                   <Button href={href} inverted={inverted}>{buttonLabel}</Button>
@@ -51,7 +48,6 @@ const Component = styled.div`
   
     p {
       margin-bottom: 46px;
-      font-size: 16px;
     }
   
     ${DefaultTheme.mq.max("md")} {
